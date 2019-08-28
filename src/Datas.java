@@ -37,6 +37,22 @@ public class Datas {
         System.out.println("Anos: "+periodo.getYears());
         System.out.println("Meses: "+periodo.getMonths());
         System.out.println("Dias: "+periodo.getDays());
+        
+        LocalDateTime agora = LocalDateTime.now();
+        System.out.println("Data/Hora: "+agora);
+        
+        DateTimeFormatter formatador2 = DateTimeFormatter
+                .ofLocalizedDateTime(
+                        FormatStyle.SHORT,
+                        FormatStyle.MEDIUM);
+        
+        String agoraFormatado2 = agora.format (formatador2);
+        System.out.println(agoraFormatado2);
+        
+        System.out.println("Horas: ");
+        System.out.println("Minutos: ");
+        System.out.println("Segundos: ");
+        System.out.println("Nanos: ");
     }
     
 }
